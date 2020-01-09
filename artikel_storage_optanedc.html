@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="ps/Logo_kotak.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ADIA | Optane DC</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #0054b8;
+        }
+        
+        .kepala {
+            width: 100%;
+            height: 60px;
+            background-color: #3b3b3b;
+            border-bottom: 5px solid #0054b8;
+        }
+        
+        .bungkus_content_head {
+            max-width: 80%;
+            height: 100%;
+            margin-left: 10%;
+        }
+        /* Logo */
+        
+        .logo {
+            float: left;
+            margin-top: 10px;
+        }
+        /* Menu Navigasi */
+        
+        .nav {
+            height: 100%;
+            width: 45%;
+            float: right;
+            margin-top: 6px;
+            margin-left: 3%;
+        }
+        
+        .nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav ul li {
+            width: 25%;
+            text-align: center;
+            height: 40px;
+            padding: 10px 0;
+            font-family: calibri;
+            font-weight: bold;
+            font-size: 18px;
+            float: left;
+            z-index: 10;
+            color: white;
+            position: relative;
+        }
+        /* Menu Navigasi DROP_DOWN */
+        
+        .nav ul ul {
+            display: none;
+            margin-top: 25px;
+            position: relative;
+        }
+        
+        .nav ul ul li a,
+        .nav ul ul ul li a {
+            padding: 0 16px;
+            display: block;
+        }
+        
+        .nav ul ul li {
+            min-width: 200px;
+            height: 100%;
+            background-color: #0054b8;
+            text-align: left;
+            font-size: 17px;
+            font-family: calibri;
+            font-weight: bold;
+        }
+        
+        .nav ul li:hover>ul {
+            display: block;
+        }
+        
+        .nav ul li:hover {
+            background-color: #0054b8;
+        }
+        
+        .nav ul ul li:hover {
+            background-color: #292929;
+        }
+        /* Menu Navigasi SUB_MENU*/
+        
+        .nav ul ul ul {
+            margin-left: 200px;
+            top: 0;
+            margin-top: 0;
+            position: absolute;
+        }
+        /*Kolom Pencarian*/
+        
+        .kotakpencarian {
+            height: 30px;
+            width: 17%;
+            border-radius: 50px;
+            float: right;
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .pencarian {
+            width: 70%;
+            height: 30px;
+            border: none;
+            padding-left: 10px;
+            background: none;
+            color: white;
+        }
+        
+        .iconsearch {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+        
+        h1 {
+            display: inline-block;
+            padding-left: 70px;
+            color: #0054b8;
+        }
+        /* Artikel Optane */
+        
+        .optane {
+            width: 100%;
+            height: 1330px;
+            background-color: #0B0B0B;
+            margin: 0;
+        }
+        
+        .tulisan1 {
+            font-family: Trebuchet MS;
+            width: 100%;
+            color: white;
+            float: left;
+            background-color: #0054b8;
+        }
+        
+        .tulisan2 {
+            font-family: Trebuchet MS;
+            width: 100%;
+            color: white;
+            float: left;
+            margin-left: 0%;
+            margin-top: 0%;
+            text-align: center;
+        }
+        
+        .tulisan3 {
+            font-family: Trebuchet MS;
+            width: 100%;
+            color: white;
+            float: left;
+            margin-left: 0%;
+            margin-top: 0%;
+            background-color: #0054b8;
+        }
+        
+        .tulisan3kiri {
+            width: 50%;
+            height: auto;
+            font-family: Trebuchet MS;
+            color: white;
+            float: left;
+            margin-left: 3%;
+        }
+        
+        .tulisan3kanan {
+            width: 50%;
+            height: auto;
+            font-family: Trebuchet MS;
+            color: white;
+            float: right;
+            margin-right: 3%;
+            margin-top: -22%;
+        }
+        /*Kaki /Footer */
+        
+        .kaki {
+            width: 100%;
+            background-color: #0B0B0B;
+            position: relative;
+            bottom: 0;
+            color: white;
+        }
+        
+        .bungkustentang {
+            width: 70%;
+            height: 100%;
+            margin-left: 15%;
+            padding: 10px;
+        }
+        
+        .tentangadia {
+            border-bottom: 2px solid grey;
+        }
+        
+        .tentangadia li {
+            display: inline;
+            padding-left: 20px;
+            font-size: 20px;
+            font-family: arial;
+        }
+        
+        .sosialmedia {
+            width: 100%;
+            margin-top: 2%;
+            margin-left: 5%;
+        }
+        
+        .ketentuan {
+            border-top: 2px solid grey;
+        }
+        
+        .ketentuan li {
+            display: inline;
+            padding-left: 20px;
+            display: inline;
+            font-size: 15px;
+            font-family: sans-serif;
+        }
+        /* buat bersihin float */
+        
+        .clear {
+            clear: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Header Dan Navigasi-->
+    <div class="kepala">
+        <div class="bungkus_content_head">
+            <a href="index.html"><img class=logo src="Bahan/Logo.png" height="45px"></a>
+
+            <div class="kotakpencarian">
+                <input class="pencarian" type="search" placeholder="Cari Sesuatu ?">
+                <a href="#"><img src="Bahan/iconsearch.png" class="iconsearch"> </a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li>Processor<b style="font-size: 10px;"> ▼</b>
+                        <ul>
+
+                            <li><a href="https://www.intel.com/content/www/us/en/products/chipsets/desktop-chipsets/h310.html" target="_blank" style="
+                                color: white;text-decoration: none;">
+                                    Core™ X-Series</a></li>
+
+                            <li><a href="https://www.intel.com/content/www/us/en/products/chipsets/desktop-chipsets/h310.html" target="_blank" style="
+                                color: white;text-decoration: none;">
+                                    Core™ i9 Family</a>
+                                <ul>
+                                    <li><a href="" target="_blank" style="color: white;text-decoration: none;">Intel Core i3</a></li>
+                                    <li><a href="" target="_blank" style="color: white;text-decoration: none;">Intel Core i5</a></li>
+                                    <li><a href="" target="_blank" style="color: white;text-decoration: none;">Intel Core i7</a></li>
+                                    <li><a href="artikel_processor_core.html" style="color: white;text-decoration: none;">Intel Core i9</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="artikel_processor_celeron.html" style="
+                                color: white;text-decoration: none;">
+                                    Celeron™ N4020</a></li>
+                            <li><a href="https://www.intel.com/content/www/us/en/products/chipsets/desktop-chipsets/h310.html" target="_blank" style="
+                                color: white;text-decoration: none;">
+                                    Celeron™ J4125</a></li>
+                        </ul>
+                    </li>
+
+                    <li>Chipset<b style="font-size: 10px;"> ▼</b>
+                        <ul>
+                            <li><a href="artikel_chipset_h310.html" style="
+                                color: white;text-decoration: none;">
+                                Intel® H310 Chipset</a></li>
+                            <li><a href="https://www.intel.com/content/www/us/en/products/chipsets/desktop-chipsets/h310.html" target="_blank" style="
+                                color: white;text-decoration: none;">
+                                Intel® Z390 Chipset </a></li>
+                            <li><a href="https://www.intel.com/content/www/us/en/products/chipsets/desktop-chipsets/h310.html" target="_blank" style="
+                                color: white;text-decoration: none;">
+                                Intel® H370 Chipset</a></li>
+                            <li><a href="https://www.intel.com/content/www/us/en/products/chipsets/desktop-chipsets/h310.html" target="_blank" style="
+                                color: white;text-decoration: none;">
+                                Intel® B360 Chipset</a></li>
+                        </ul>
+                    </li>
+
+                    <li>Server<b style="font-size: 10px;"> ▼</b>
+                        <ul>
+                            <li><a href="artikel_server_dcb.html" style="
+                                color: white;text-decoration: none;">
+                                    Intel® Data Center Block (DCB)</a></li>
+                            <li><a href="https://www.intel.com/content/www/us/en/products/chipsets/desktop-chipsets/h310.html" target="_blank" style="
+                                color: white;text-decoration: none;">
+                                    Intel® Server-Board</a></li>
+                        </ul>
+                    </li>
+
+                    <li>Storage<b style="font-size: 10px;"> ▼</b>
+                        <ul>
+                            <li><a href="artikel_storage_optane.html" style="
+                                color: white;text-decoration: none;">
+                                    Intel® Optane Memori</a></li>
+                            <li><a href="artikel_storage_optanedc.html" style="
+                                color: white;text-decoration: none;">
+                                    Intel® Optane DC</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Artikel Optane Memori-->
+    <div class="optane">
+
+        <img src="ps/optanedc.png" width="1349px" height="auto" style="float:left; ">
+
+        <div class="tulisan1">
+            <p style="font-family: Trebuchet MS; font-size: 20px; text-align: center;
+            margin-left: 9%; width: 80%;">
+                "Memori persisten Intel® Optane™ DC merepresentasikan sebuah inovasi teknologi terobosan terbaru, Dihadirkan dengan prosesor Intel® Xeon® yang Dapat Diskalakan Generasi ke-2, teknologi yang dioptimalkan untuk beban kerja ini akan membantu bisnis untuk
+                mendapatkan lebih banyak wawasan dari data yang dapat ditindaklanjuti – dari cloud dan database, hingga analisis dalam memori, dan jaringan pengiriman konten."<br>
+                <p>
+
+        </div>
+
+        <div class="tulisan2">
+            <p>
+
+                <video controls width="600px" height="auto">
+               <source src="ps/optanedc_memori.mp4" type="video/mp4">
+           </video>
+
+            </p>
+        </div>
+
+        <div class="tulisan3">
+            <p style="font-family: Trebuchet MS; font-size: 30px; text-align: center; color:white;">
+                Apa yang dimaksud dengan Memori Persisten Intel® Optane™ DC?
+            </p>
+            <p style="font-family: Trebuchet MS; font-size: 20px; text-align: center; width:90%;
+        margin-left: 4%;">
+                Memori persisten Intel® Optane™ DC adalah teknologi memori inovatif yang menghadirkan kombinasi unik dari kapasitas besar yang terjangkau dan dukungan untuk persistensi data. Tonton animasi ini untuk melihat bagaimana teknologi dapat membantu bisnis untuk
+                mendapatkan wawasan yang lebih cepat dari aplikasi yang intensif data milik mereka serta menghadirkan keunggulan skalabilitas layanan yang ditingkatkan secara konsisten dengan mesin virtual dan densitas kontainer yang lebih tinggi.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!--FOOTER-->
+    <div class="kaki">
+        <div class="bungkustentang">
+            <div class="tentangadia">
+                <ul>
+                    <li><a href="about_us.html" style="text-decoration:none; color: #ffffff;">About Us</li>
+                    <li>Contact</li>
+                    <li>Help</li>
+                </ul>
+            </div>
+
+<div class="sosialmedia">
+    <a href="http://twitter.com/gulajavanese" target="_blank"><img src="Bahan/twitter.png" width="50px"></a>
+                        <a href="http://instagram.com/gulajavanese" target="_blank"><img src="Bahan/Instagram.png" width="50px"></a>
+                        <a href="http://web.whatsapp.com/085781598383" target="_blank"><img src="Bahan/whatsapp.png" width="50px"></a>
+                        <a href="http://facebook.com/zetick12 " target="_blank "><img src="Bahan/facebook.png " width="50px "></a>
+                        <br><br>
+
+            </div>
+            <div class="ketentuan">
+                <ul>
+                    <li>Privacy</li>
+                    <li>Terms and Conditions </li>
+                    <li>Cookie Policy </li>
+                    <li>Team Information</li>
+                </ul>
+                <p style="float:right; margin-top:-4%; margin-right:5%"> ©2019 ADIA Technologies, Inc.</p>
+            </div>
+        </div>
+
+
+
+
+
+</body>
+
+</html>

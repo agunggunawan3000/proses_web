@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="ps/Logo_kotak.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ADIA | Home</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #0054b8;
+            color: white;
+        }
+        
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .kepala {
+            width: 100%;
+            height: 60px;
+            background-color: #3b3b3b;
+            border-bottom: 5px solid #0054b8;
+        }
+        
+        .bungkus_content_head {
+            max-width: 80%;
+            height: 100%;
+            margin-left: 10%;
+        }
+        /* Logo */
+        
+        .logo {
+            float: left;
+            margin-top: 10px;
+        }
+        /* Menu Navigasi */
+        
+        .nav {
+            height: 100%;
+            width: 45%;
+            float: right;
+            margin-top: 6px;
+            margin-left: 3%;
+        }
+        
+        .nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav ul li {
+            width: 25%;
+            text-align: center;
+            height: 40px;
+            padding: 10px 0;
+            font-family: calibri;
+            font-weight: bold;
+            font-size: 18px;
+            float: left;
+            z-index: 10;
+            color: white;
+            position: relative;
+        }
+        /* Menu Navigasi DROP_DOWN */
+        
+        .nav ul ul {
+            display: none;
+            margin-top: 25px;
+            position: relative;
+        }
+        
+        .nav ul ul li a,
+        .nav ul ul ul li a {
+            padding: 0 16px;
+            display: block;
+        }
+        
+        .nav ul ul li {
+            min-width: 200px;
+            height: 100%;
+            background-color: #0054b8;
+            text-align: left;
+            font-size: 17px;
+            font-family: calibri;
+            font-weight: bold;
+        }
+        
+        .nav ul li:hover>ul {
+            display: block;
+        }
+        
+        .nav ul li:hover {
+            background-color: #0054b8;
+        }
+        
+        .nav ul ul li:hover {
+            background-color: #292929;
+        }
+        /* Menu Navigasi SUB_MENU*/
+        
+        .nav ul ul ul {
+            margin-left: 200px;
+            top: 0;
+            margin-top: 0;
+            position: absolute;
+        }
+        /*Kolom Pencarian*/
+        
+        .kotakpencarian {
+            height: 30px;
+            width: 17%;
+            border-radius: 50px;
+            float: right;
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .pencarian {
+            width: 70%;
+            height: 30px;
+            border: none;
+            padding-left: 10px;
+            background: none;
+            color: white;
+        }
+        
+        .iconsearch {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+        
+        .iconlogin {
+            margin-top: 15px;
+            width: 5%;
+            height: 30px;
+            float: right;
+            background-image: url("Bahan/login.png");
+            background-size: 30px;
+            background-repeat: no-repeat;
+        }
+        /*gambar*/
+        /*Animasi*/
+        
+        @keyframes intelfamily1 {
+            0% {
+                opacity: 1;
+                visibility: visible;
+            }
+            15% {
+                opacity: 1;
+                visibility: visible;
+            }
+            25% {
+                opacity: 0;
+                visibility: hidden;
+            }
+            50% {
+                opacity: 0;
+                visibility: hidden;
+            }
+            75% {
+                opacity: 0;
+                visibility: hidden;
+            }
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        
+        @keyframes intelfamily2 {
+            0% {
+                opacity: 1;
+                visibility: visible;
+            }
+            25% {
+                opacity: 1;
+                visibility: visible;
+            }
+            35% {
+                opacity: 1;
+                visibility: visible;
+            }
+            50% {
+                opacity: 0;
+                visibility: hidden;
+            }
+            75% {
+                opacity: 0;
+                visibility: hidden;
+            }
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        
+        @keyframes intelfamily3 {
+            0% {
+                opacity: 1;
+                visibility: visible;
+            }
+            25% {
+                opacity: 1;
+                visibility: visible;
+            }
+            50% {
+                opacity: 1;
+                visibility: visible;
+            }
+            75% {
+                opacity: 0;
+                visibility: hidden;
+            }
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        
+        @keyframes intelfamily4 {
+            0% {
+                opacity: 0;
+                visibility: hidden;
+            }
+            25% {
+                opacity: 0;
+                visibility: hidden;
+            }
+            50% {
+                opacity: 1;
+                visibility: visible;
+            }
+            75% {
+                opacity: 1;
+                visibility: visible;
+            }
+            100% {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        /*Slide*/
+        
+        .bungkusslide {
+            position: relative;
+            width: 100%;
+            height: 451px;
+            margin: auto;
+            background-color: black;
+        }
+        
+        .bungkus_gambar {
+            position: absolute;
+            width: 100%;
+            height: 451px;
+            z-index: 4;
+            margin: auto;
+            background-image: url('Bahan/Intel2.png');
+            background-repeat: no-repeat;
+            animation: intelfamily1 20s ease-out 3s infinite alternate;
+        }
+        
+        .deskripsi_gambar {
+            font-family: sans-serif;
+            float: right;
+            margin-right: 7%;
+            margin-top: 4%;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            width: 50%;
+            height: 120px;
+        }
+        
+        .bungkus_gambar2 {
+            position: absolute;
+            width: 100%;
+            z-index: 3;
+            height: 451px;
+            margin: auto;
+            background-image: url('Bahan/Intel3.png');
+            background-repeat: no-repeat;
+            animation: intelfamily2 20s ease-out 7s infinite alternate;
+        }
+        
+        .deskripsi_gambar2 {
+            position: absolute;
+            font-family: sans-serif;
+            float: left;
+            margin-left: 7%;
+            margin-top: 4%;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            width: 50%;
+            height: 120px;
+        }
+        
+        .bungkus_gambar3 {
+            position: absolute;
+            width: 100%;
+            height: 451px;
+            z-index: 2;
+            margin: auto;
+            background-image: url('Bahan/Intel2.1.png');
+            background-repeat: no-repeat;
+            animation: intelfamily3 20s ease-out 10s infinite alternate;
+        }
+        
+        .deskripsi_gambar3 {
+            font-family: sans-serif;
+            float: right;
+            margin-right: 7%;
+            margin-top: 8%;
+            padding: 30px 20px;
+            text-align: center;
+            color: #fff;
+            width: 50%;
+            height: 120px;
+        }
+        
+        .bungkus_gambar4 {
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+            height: 451px;
+            margin: auto;
+            background-image: url('Bahan/Intel4.png');
+            background-repeat: no-repeat;
+            animation: intelfamily4 20s ease-out 11s infinite alternate;
+        }
+        
+        .deskripsi_gambar4 {
+            font-family: sans-serif;
+            float: right;
+            margin-right: 5%;
+            margin-top: 4%;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            width: 50%;
+            height: 120px;
+        }
+        
+        .lebihdetil {
+            padding: 10px;
+            border: 2px solid #0054b8;
+            background-color: #0054b8;
+            font-family: sans-serif;
+            color: white;
+            width: 20%;
+            margin-top: 10px;
+            text-decoration: none;
+            margin-left: 40%;
+        }
+        
+        .lebihdetil:hover {
+            background-color: rgba(0, 0, 0, .2);
+            border: 2px solid #0054b8;
+            color: #fff;
+        }
+        /* Kotak Spesifikasi */
+        
+        .spesifikasi {
+            width: 100%;
+            height: 203px;
+            background-color: #000;
+        }
+        
+        .spesifikasi2 {
+            display: inline-block;
+            width: 20%;
+            height: 180px;
+            text-align: center;
+            margin-left: 5%;
+            padding: 5px;
+            font-family: sans-serif;
+            box-shadow: -5px 5px 10px -3px #009FDD;
+        }
+        
+        .spesifikasi3 {
+            display: inline-block;
+            width: 20%;
+            height: 180px;
+            text-align: center;
+            padding: 0 15px;
+            font-family: sans-serif;
+        }
+        
+        .spesifikasi4 {
+            display: inline-block;
+            width: 20%;
+            height: 180px;
+            text-align: center;
+            padding: 0 15px;
+            font-family: sans-serif;
+        }
+        
+        .spesifikasi5 {
+            display: inline-block;
+            width: 20%;
+            height: 180px;
+            text-align: center;
+            padding: 0 15px;
+            font-family: sans-serif;
+            box-shadow: 5px -5px 10px -3px #009FDD;
+        }
+        
+        h1 {
+            display: inline-block;
+            padding-left: 70px;
+            color: #0054b8;
+        }
+        /* Articel Processor */
+        
+        .processor {
+            width: 100%;
+            height: 360px;
+            background-color: #0B0B0B;
+            margin: 0;
+            padding-top: 40px;
+            box-shadow: inset 0px 0px 35px black;
+        }
+        
+        .artikel {
+            display: inline-block;
+            width: 25%;
+            height: 268px;
+            margin-left: 6%;
+        }
+        
+        .gambar-articel {
+            width: 100%;
+            height: 170px;
+        }
+        
+        .tulisan {
+            font-family: sans-serif;
+            padding-top: 10px;
+        }
+        
+        .lebihlanjut {
+            padding: 8px;
+            border: 2px solid white;
+            font-family: sans-serif;
+            width: 40%;
+            margin-top: 10px;
+            text-decoration: none;
+            text-align: center;
+        }
+        
+        .lebihlanjut:hover {
+            background-color: #fff;
+            color: #000;
+        }
+        /* Penyimpana */
+        
+        .artikelpenyimpanan {
+            width: 100%;
+            height: 310px;
+            padding: 30px 0;
+            background-color: black;
+        }
+        
+        .penyimpanan {
+            width: 100%;
+            height: 351px;
+            margin-top: 1%;
+            background-image: url('Bahan/intel_optane.png');
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+        }
+        
+        .optanememori {
+            width: 40%;
+            height: 300px;
+            margin-top: 50px;
+            margin-right: 5%;
+            float: right;
+            font-family: sans-serif;
+        }
+        
+        .spekintel1 {
+            width: 30%;
+            display: inline-block;
+            text-align: center;
+            padding: 10px;
+            border-radius: 12px;
+            margin-left: 10%;
+        }
+        
+        .spesifikasistorage {
+            width: 45%;
+            display: inline-block;
+            height: 250px;
+            padding: 30px 0;
+            font-family: 'Franklin Gothic Medium';
+        }
+        /*Kaki /Footer */
+        
+        .kaki {
+            width: 100%;
+            background-color: #0B0B0B;
+            position: relative;
+            bottom: 0;
+        }
+        
+        .thekunyuk {
+            width: 70%;
+            height: 100%;
+            margin-left: 15%;
+            padding: 10px;
+        }
+        
+        .tentangthekunyuk {
+            border-bottom: 2px solid grey;
+        }
+        
+        .tentangthekunyuk li {
+            display: inline;
+            padding-left: 20px;
+            font-size: 20px;
+            font-family: arial;
+        }
+        
+        .sosialmedia {
+            width: 100%;
+            margin-top: 2%;
+            margin-left: 5%;
+        }
+        
+        .tentangthekunyuk2 {
+            border-top: 2px solid grey;
+        }
+        
+        .tentangthekunyuk2 li {
+            display: inline;
+            padding-left: 20px;
+            display: inline;
+            font-size: 15px;
+            font-family: sans-serif;
+        }
+        /* buat bersihin float */
+        
+        .clear {
+            clear: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Header Dan Navigasi-->
+    <div class="kepala">
+        <div class="bungkus_content_head">
+            <a href="index.html"><img class=logo src="Bahan/Logo.png" height="45px"></a>
+            <div class="iconlogin">
+                    <p style="text-align: right; margin-left: 60%; margin-top:10%; font-family: calibri;">
+                        <a href="form_daftar.html">Daftar&nbsp;Akun</a></p>
+            </div>          
+            <div class="kotakpencarian">
+                <input class="pencarian" type="search" placeholder="Cari Sesuatu ?">
+                <a href="#"><img src="Bahan/iconsearch.png" class="iconsearch"> </a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li>Processor<b style="font-size: 10px;"> ▼</b>
+                        <ul>
+
+                            <li><a href="https://www.intel.com/content/www/us/en/products/chipsets/desktop-chipsets/h310.html" target="_blank">
+                                    Core™ X-Series</a></li>
+
+                            <li><a href="https://www.intel.com/content/www/us/en/products/chipsets/desktop-chipsets/h310.html" target="_blank">
+                                    Core™ i9 Family</a>
+                                <ul>
+                                    <li><a href="" target="_blank">Intel Core i3</a></li>
+                                    <li><a href="" target="_blank">Intel Core i5</a></li>
+                                    <li><a href="" target="_blank">Intel Core i7</a></li>
+                                    <li><a href="artikel_processor_core.html">Intel Core i9</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="artikel_processor_celeron.html">
+                                    Celeron™ N4020</a></li>
+                            <li><a href="https://www.intel.com/content/www/us/en/products/chipsets/desktop-chipsets/h310.html" target="_blank">
+                                    Celeron™ J4125</a></li>
+                        </ul>
+                    </li>
+
+                    <li>Chipset<b style="font-size: 10px;"> ▼</b>
+                        <ul>
+                            <li><a href="artikel_chipset_h310.html">
+                                Intel® H310 Chipset</a></li>
+                            <li><a href="https://www.intel.com/content/www/us/en/products/chipsets/desktop-chipsets/h310.html" target="_blank">
+                                Intel® Z390 Chipset </a></li>
+                            <li><a href="https://www.intel.com/content/www/us/en/products/chipsets/desktop-chipsets/h310.html" target="_blank">
+                                Intel® H370 Chipset</a></li>
+                            <li><a href="https://www.intel.com/content/www/us/en/products/chipsets/desktop-chipsets/h310.html" target="_blank">
+                                Intel® B360 Chipset</a></li>
+                        </ul>
+                    </li>
+
+                    <li>Server<b style="font-size: 10px;"> ▼</b>
+                        <ul>
+                            <li><a href="artikel_server_dcb.html">
+                                    Intel® Data Center Block (DCB)</a></li>
+                            <li><a href="https://www.intel.com/content/www/us/en/products/chipsets/desktop-chipsets/h310.html" target="_blank">
+                                    Intel® Server-Board</a></li>
+                        </ul>
+                    </li>
+
+                    <li>Storage<b style="font-size: 10px;"> ▼</b>
+                        <ul>
+                            <li><a href="artikel_storage_optane.html">
+                                    Intel® Optane Memori</a></li>
+                            <li><a href="artikel_storage_optanedc.html">
+                                    Intel® Optane DC</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Slide Intel Core Processor-->
+    <div class="bungkusslide">
+        <div class="bungkus_gambar">
+            <div class="deskripsi_gambar">
+                <h2>KEKUATAN PROCESSOR MOBILE OCTA-CORE UNLOCKED. OVERCLOCK 9TH GEN INTEL® CORE™ i9 PROCESSOR</h2>
+                <p>Processor Dari Intel dengan Codename "Coffee-Lake-Refresh". Penuhi kebutuhan Gaming, Content Creator, dan OC kalian + Intel Optane Memori.</p>
+                <h1>8 CORE™</h1>
+                <h1>UP TO 70%</h1>
+                <a href="artikel_processor_core.html">
+                    <div class="lebihdetil ">Lebih Detail</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="bungkus_gambar2 ">
+            <div class="deskripsi_gambar2 ">
+                <h2>PROCESSOR YANG TEPAT UNTUK ANDA BERMAIN GAMES</h2>
+                <p>Setting 4K Kualitas Gambar Tinggi, dengan peningkatan performa untuk game AAA dan dirancang untuk Turnamen dan Game Kompetitif.</p>
+                <h1>HIGH PRESET</h1>
+                <h1>4K RESOLUTION</h1>
+                <a href="artikel_processor_core.html ">
+                    <div class="lebihdetil ">Lebih Detail</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="bungkus_gambar3 ">
+            <div class="deskripsi_gambar3 ">
+                <h2>TAMPILAN BANCHMARK DENGAN BEBERAPA TAMPILAN GAME AAA DENGAN PERFORMA TERBAIK </h2>
+                <p>Ketangguhan dari Processor i9-9980HK Menampilkan Benchmark Terbaik tentang Game Assassin's Creed Odyssey.</p>
+                <a href="artikel_processor_core.html ">
+                    <div class="lebihdetil ">Lebih Detail</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="bungkus_gambar4 ">
+            <div class="deskripsi_gambar4 ">
+                <h2>INTEL i9-9900K TELAH RILIS DENGAN TURBO CLOCK HINGGA 5.0 GHZ</h2>
+                <p>Perilisan Intel i9 9900 untuk Server Kelas High-End dibuat dengan Core dan Threads yang lebih besar. L3 Cache yang Tangguh, Menghadirkan peningkatan performa yang sangat cepat dalam pengoperasian yang Anda butuhkan.</p>
+                <h1>8 CORE™</h1>
+                <h1>16 THREADS</h1>
+                <a href="artikel_processor_core.html ">
+                    <div class="lebihdetil ">Lebih Detail</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Artikel Spesifikasi Intel Core Processor-->
+    <div class="spesifikasi ">
+        <div class="spesifikasi2 ">
+            <h3 style="color:#269dff ">INTEL WI-FI 6 AX200<br>GIG+</h3>
+            <font color=#fff>
+                Bermain di tempat yang Anda inginkan, Kecepatan Tinggi, dan Manajemen yang cerdas.</font>
+        </div>
+        <div class="spesifikasi3 ">
+            <h3 style="color:#269dff ">INTEL OPTANE MEMORY<br>H10</h3>
+            <font color=#fff>
+                SSD untuk perangkat tipis dan ringan tanpa mengorbankan kapasitas dan kecepatan.</font>
+        </div>
+        <div class="spesifikasi4 ">
+            <h3 style="color:#269dff ">THUNDERBOLT 3</h3><br>
+            <font color=#fff>
+                Penyimpanan Data, Akses Monitor 4K Eksternal, Dan Menambahkan VGA External.</font>
+        </div>
+        <div class="spesifikasi5 ">
+            <h3 style="color:#269dff ">ENTHUSIAST GAMING</h3><br>
+            <font color=#fff>
+                Peningkatan Performa 50% untuk FPS Kompetitif, Up to 5GHz Turbo (Intel Themal Velocity).</font>
+        </div>
+    </div>
+
+
+    <!--Artikel Intel Core Processor-->
+    <div class="processor ">
+        <div class="artikel ">
+            <img src="Bahan/Intelartikel.png " class="gambar-articel ">
+            <div class="tulisan ">
+                <b>PROCESSOR BARU INTEL 9th GEN  </b><br>
+                <P>Hadir dengan 8 Core 16 Thread pada Processor i9-9980HK untuk Overclocking.</P>
+                <a href="artikel_processor_core.html " style="text-decoration: none; ">
+                    <div class="lebihlanjut ">
+                        Lebih Detail</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="artikel ">
+            <img src="Bahan/Inteli9.jpg " class="gambar-articel ">
+            <div class="tulisan ">
+                <b>INTEL GEN 9TH UNTUK MOBILE PROCESSOR </b><br>
+                <P>Peningkatan Performa dengan adanya <i>Turbo Boost</i> di CORE i9 dan Fitur Unlocked.</P>
+                <a href="artikel_processor_core.html " style="text-decoration: none; ">
+                    <div class="lebihlanjut ">Lebih Detail</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="artikel ">
+            <img src="Bahan/9thGEN.png " class="gambar-articel ">
+            <div class="tulisan ">
+                <b>COFFEE LAKE-REFRESH DENGAN DAYA 45W </b>
+                <P> Intel Mengumumkan Processor Coffee Lake-Refresh 45 W 9th Gen H-series.</P>
+                <a href="artikel_processor_core.html " style="text-decoration: none; ">
+                    <div class="lebihlanjut ">Lebih Detail </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Gambar Dan Deskripsi Intel Optane Memori-->
+    <div class="penyimpanan ">
+        <div class="optanememori ">
+            <h2>INTEL OPTANE MEMORI</h2>
+            <p> Kapasitas Besar, Kecepatan Up to 2.1X Transfer Data, dan Mendukung segala jenis Processor Intel Generasi ke-9.</p>
+            <div class="spekintel1 ">
+                <h4 style="padding: 0;margin-bottom: 0; margin-top:5px; ">System Responsive</h4>
+                <p style="margin-top: 5px;margin-bottom:8px;font-weight:bold; font-size:25px;color:#0099ff; ">2.1X<sup>1</sup>
+                </p>
+                <b>Lebih Cepat</b>
+            </div>
+            <div class="spekintel1 ">
+                <h4 style="padding: 0;margin-bottom: 0; margin-top:8px; ">Read / Write</h4>
+                <p style="margin-top: 5px;margin-bottom:8px;font-weight:bold; font-size:25px;color:#0099ff; ">1 GB
+                </p>
+                <b>Lebih Cepat</b>
+            </div>
+            <a href="artikel_storage_optane.html ">
+                <div class="lebihdetil " style="text-align:center ">Lebih Detail</div>
+            </a>
+        </div>
+    </div>
+
+
+    <!--Artikel Penyimpanan Intel Optane-->
+    <div class="artikelpenyimpanan ">
+        <div class="spesifikasistorage ">
+            <img src="Bahan/inteloptane.png " width=40% height=auto style="float: left; ">
+            <h2 style="margin: 0; ">PERCEPAT MEMORI PENYIMPANAN ANDA</h2>
+            <p style="line-height: 25px; font-family: Arial, Helvetica, sans-serif; text-align: justify;width: 60%;float:left ">Pasangkan Memori Intel® Optane™ M10 dengan <i>Hard Disk Drive</i> (HDD) Anda untuk mendapatkan Responsivitas seperti SSD dari Boot HDD dan Penyimpanan Data yang dipercepat. Lakukan <i>booting</i>, akses penyimpanan, luncurkan aplikasi, dan
+                selesaikan pekerjaan Anda pada kecepatan maksimal dari HDD booster yang otomatis mengakses File dan Aplikasi yang sering digunakan.</p>
+        </div>
+        <div class="spesifikasistorage ">
+            <img src="Bahan/inteloptane2.png " width=40% height=auto style="float: left; ">
+            <h2 style="margin: 0; ">PENAMBAHAN PENYIMPANAN DIPERCEPAT</h2>
+            <p style="line-height: 25px; font-family: Arial, Helvetica, sans-serif; text-align: justify;width: 60%;float:left
+                    ">Tambahan responsivitas dan kapasitas ke komputer Anda dengan kombinasi cerdas Memori Intel® Optane™ dan Penyimpanan Intel® QLC 3D NAND dalam satu faktor bentuk "M.2 ". Memori Intel® Optane™ H10 dengan Penyimpanan <i>Solid State</i> menggabungkan
+                responsivitas dengan kapasitas penyimpanan hingga 1 TB (<i>Terrabyte</i>) dalam satu perangkat.</p>
+        </div>
+    </div>
+
+
+    <!--FOOTER-->
+    <div class="kaki ">
+        <div class="thekunyuk ">
+            <div class="tentangthekunyuk ">
+                <ul>
+                    <li><a href="about_us.html ">
+                    About Us</a></li>
+                    <li>Contact</li>
+                    <li>Help</li>
+                </ul>
+            </div>
+
+            <div class="sosialmedia ">
+                <a href="http://twitter.com/gulajavanese " target="_blank "><img src="Bahan/twitter.png " width="50px "></a>
+                <a href="http://instagram.com/gulajavanese " target="_blank "><img src="Bahan/Instagram.png " width="50px "></a>
+                <a href="http://web.whatsapp.com/085781598383 " target="_blank "><img src="Bahan/whatsapp.png " width="50px "></a>
+                <a href="http://facebook.com/zetick12 " target="_blank "><img src="Bahan/facebook.png " width="50px "></a>
+                <br><br>
+            </div>
+
+            <div class="tentangthekunyuk2 ">
+                <ul>
+                    <li>Privacy</li>
+                    <li>Terms and Conditions </li>
+                    <li>Cookie Policy </li>
+                    <li>Team Information</li>
+                </ul>
+                <p style="float:right; margin-top:-3%; margin-right:5% "> ©2019 ADIA Technologies, Inc.</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
